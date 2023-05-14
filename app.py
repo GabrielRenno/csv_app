@@ -6,15 +6,15 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-openai_api_key = "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"
+openai_api_key = "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"
 
 
 
 #os.chdir("/Users/gabrielrenno/Documents/CSV_APP/") 
 #import configparser
 #config = configparser.ConfigParser()
-#config.read('secrets/config.ini')
 
+#config.read('secrets/config.ini')
 #openai_api_key = config["DEFAULT"]["OPENAI_API_KEY"]
 
 # Set the title of the app
