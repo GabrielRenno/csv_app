@@ -6,7 +6,7 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-openai_api_key = st.secrets["OPENAI_API_KEY"] 
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # Set the title of the app
 st.title("Dataset Exploration App")
