@@ -6,9 +6,9 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-openai_api_key = "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"
+#openai_api_key = "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"
 
-#openai_api_key = os.getenv('OPENAI_API_KEY')
+openai_api_key = st.secrets['OPENAI_API_KEY']
 
 #os.chdir("/Users/gabrielrenno/Documents/CSV_APP/") 
 #import configparser
