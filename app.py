@@ -6,13 +6,12 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-
-OPENAI_API_KEY = "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"
+openai_api_key = st.secrets["OPENAI_API_KEY"] 
 
 # Set the title of the app
 st.title("Dataset Exploration App")
 
-llm = OpenAI(api_token=OPENAI_API_KEY, temperature=0.0)
+llm = OpenAI(api_token=openai_api_key, temperature=0.0)
 
 pandas_ai = PandasAI(llm=llm)
 def main():
