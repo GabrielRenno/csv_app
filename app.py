@@ -6,7 +6,7 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-openai_api_key = "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"
+#openai_api_key = "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"
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
