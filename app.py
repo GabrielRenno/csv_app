@@ -6,7 +6,17 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+#openai_api_key = os.getenv("OPENAI_API_KEY")
+
+
+import os
+os.chdir("/Users/gabrielrenno/Documents/CSV_APP/") 
+
+import configparser
+config = configparser.ConfigParser()
+config.read('secrets/config.ini')
+
+openai_api_key = config["DEFAULT"]["OPENAI_API_KEY"]
 
 # Set the title of the app
 st.title("Dataset Exploration App")
