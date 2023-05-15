@@ -6,9 +6,11 @@ import numpy as np
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-#openai_api_key = "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"
 
-openai_api_key = st.secrets[openai]['OPENAI_API_KEY']
+
+#openai_api_key = "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"
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 #os.chdir("/Users/gabrielrenno/Documents/CSV_APP/") 
 #import configparser
@@ -18,23 +20,26 @@ openai_api_key = st.secrets[openai]['OPENAI_API_KEY']
 #openai_api_key = config["DEFAULT"]["OPENAI_API_KEY"]
 
 # Set the title of the app
-st.title("Dataset Exploration App")
+st.title("Ask your data!")
 
 llm = OpenAI(api_token=openai_api_key, temperature=0.0)
 
 pandas_ai = PandasAI(llm=llm)
 def main():
 
-   
+    
 
     # Create a side bar
     st.sidebar.title("About")
     st.sidebar.info(
-        "This app is a demo of the PandasAI library. It uses the OpenAI API to answer questions about your dataset."
+        "This app allows you to explore your dataset using the ChatGPT-4 model. You can ask questions and also plot your data. Try it out!"
     )
+   
+    st.sidebar.subheader('Developed by')
+    st.sidebar.write('Gabriel Rennó')
+    st.sidebar.write('Contact: gabriel_renno@outlook.com')
     st.sidebar.title("CSV File Reader")
     st.sidebar.write("Upload a CSV file and choose the separator.")
-    
 
     # File upload
     uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type="csv")
